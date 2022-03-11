@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/jstable1/team-info/issues"
   },
-  "homepage": "https://github.com/jstable1/team-info#readme"
+  "homepage": "https://github.com/jstable1/team-info#readme",
+  "dependencies": {
+    "inquirer": "^8.2.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
 }
