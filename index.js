@@ -10,17 +10,17 @@ const createManager = () => {
         {
             type: 'text',
             name: 'name',
-            message: 'What is the team managers name?',
+            message: "What is the team manager's name?",
         },
         {
             type: 'number',
             name: 'employeeID',
-            message: 'What is the team managers employee ID?',
+            message: "What is the team manager's employee ID?",
         },
         {
             type: 'text',
             name: 'email',
-            message: 'What is the team managers email?',
+            message: "What is the team manager's email?",
         },
         {
             type: 'number',
@@ -67,4 +67,64 @@ const createMenu = () => {
     })
 }
 
+const createEngineer = () => {
+    inquirer.prompt([
+        {
+            type: 'text',
+            name: 'name',
+            message: "What is the engineer's name?",
+        },
+        {
+            type: 'number',
+            name: 'employeeID',
+            message: "What is the engineer's employee ID?",
+        },
+        {
+            type: 'text',
+            name: 'email',
+            message: "What is the engineer's email?",
+        },
+        {
+            type: 'text',
+            name: 'github',
+            message: "What is the engineer's github username?",
+        }
+    ]) .then (answers => {
+        let engineer = new Engineer (answers.name, answers.employeeID, answers.email, answers.github);
+        teamArray.push(engineer)
+        createMenu()
+    })
+}
+
+const createIntern = () => {
+    inquirer.prompt([
+        {
+            type: 'text',
+            name: 'name',
+            message: "What is the intern's name?",
+        },
+        {
+            type: 'number',
+            name: 'employeeID',
+            message: "What is the intern's employee ID?",
+        },
+        {
+            type: 'text',
+            name: 'email',
+            message: "What is the intern's email?",
+        },
+        {
+            type: 'number',
+            name: 'school',
+            message: "What school does the intern attend?",
+        }
+    ]) .then (answers => {
+        let intern = new Intern (answers.name, answers.employeeID, answers.email, answers.school);
+        teamArray.push(intern)
+        createMenu()
+    })
+}
+
 createManager()
+createEngineer()
+createIntern()
