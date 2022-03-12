@@ -1,5 +1,3 @@
-// template literal
-
 const createHTML = teamArray => {
     return `
     ${generateEngineerCards(teamArray)}`
