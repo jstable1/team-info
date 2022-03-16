@@ -1,8 +1,22 @@
 const createHTML = teamArray => {
     return `
-    ${generateManagerCard(teamArray)}
-    ${generateEngineerCards(teamArray)}
-    ${generateInternCards(teamArray)}`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Info</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body>
+${generateManagerCard(teamArray)}
+${generateEngineerCards(teamArray)}
+${generateInternCards(teamArray)}
+</body>
+</html>
+`
 }
 
 const generateManagerCard = teamArray => {
@@ -14,7 +28,7 @@ const generateManagerCard = teamArray => {
             return `
             <div class = "name">
                 ${manager.name} <br>
-                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/fluency-systems-filled/48/000000/coffee.png"/> Engineer
+                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/fluency-systems-filled/48/000000/coffee.png"/> Manager
             </div>
             <div class = "employee-info">
                 ${manager.employeeID}
@@ -36,7 +50,7 @@ const generateEngineerCards = teamArray => {
             return `
             <div class = "name">
                 ${engineer.name} <br>
-                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/fluency-systems-filled/48/000000/coffee.png"/> Engineer
+                <link rel="icon" type="image/x-icon" href="<img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-glasses-banking-and-finance-kiranshastry-lineal-kiranshastry.png"/> Engineer
             </div>
             <div class = "employee-info">
                 ${engineer.employeeID}
@@ -58,7 +72,7 @@ const generateInternCards = teamArray => {
             return `
             <div class = "name">
                 ${intern.name} <br>
-                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/fluency-systems-filled/48/000000/coffee.png"/> Engineer
+                <link rel="icon" type="image/x-icon" href="<img src="https://img.icons8.com/material-sharp/24/000000/student-female.png"/> Intern
             </div>
             <div class = "employee-info">
                 ${intern.employeeID}
