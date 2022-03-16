@@ -3,6 +3,7 @@ const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const createHTML = require('./src/page-template.js');
+const fs = require('fs');
 let teamArray = [];
 
 const createManager = () => {
@@ -55,8 +56,8 @@ const createMenu = () => {
             createEngineer()
         } else if (answers.choicesMenu === 'New Intern') {
             createIntern()
-        } else {createHTML(teamArray)
-            fs.writeFile('./dist/index.html', generateHTML(answers), err => {
+        } else {
+            fs.writeFile('./dist/index.html', createHTML(teamArray), err => {
                 if (err) {
                     console.log(err)
                   return;
@@ -114,7 +115,7 @@ const createIntern = () => {
             message: "What is the intern's email?",
         },
         {
-            type: 'number',
+            type: 'text',
             name: 'school',
             message: "What school does the intern attend?",
         }
@@ -126,5 +127,3 @@ const createIntern = () => {
 }
 
 createManager()
-createEngineer()
-createIntern()

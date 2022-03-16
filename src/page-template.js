@@ -4,9 +4,25 @@ const createHTML = teamArray => {
 }
 
 const generateEngineerCards = teamArray => {
-//filter array to only show engineer
-// map the engineers and return template literal of an engineer card for each one
-// join the array of template literals
+    return `
+    <section class = "engineer-cards">
+    ${teamArray
+        .filter(( employee ) => employee.getRole() === 'engineer')
+        .map (( engineer ) => {
+            return `
+            <div class = "name">
+                ${engineer.name} <br>
+                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/fluency-systems-filled/48/000000/coffee.png"/> Engineer
+            </div>
+            <div class = "employee-info"
+                ${engineer.employeeID}
+                ${engineer.email}
+                ${engineer.github}
+            </div>`
+        })
+        .join(' ')}
+    </section>
+    `
 }
 
 module.exports = createHTML
