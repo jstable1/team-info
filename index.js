@@ -24,7 +24,7 @@ const createManager = () => {
             message: "What is the team manager's email?",
         },
         {
-            type: 'number',
+            type: 'text',
             name: 'officeNumber',
             message: "What is the team manager's office phone number?",
         }

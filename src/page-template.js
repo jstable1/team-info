@@ -35,7 +35,9 @@ const generateManagerCard = teamArray => {
             </h2>
             <div class = "employee-info">
                 <h3> ID: ${manager.employeeID} </h3>
-                <h3> Email: ${manager.email} </h3>
+                <h3> Email: 
+                    <a href="mailto:${manager.email}">${manager.email}</a>
+                </h3>
                 <h3> Office Number: ${manager.officeNumber} </h3>
             </div>`
         })
@@ -57,8 +59,12 @@ const generateEngineerCards = teamArray => {
             </h2>
             <div class = "employee-info">
                 <h3> ID: ${engineer.employeeID} </h3>
-                <h3> Email: ${engineer.email} </h3>
-                <h3> GitHub: ${engineer.github} </h3>
+                <h3> Email: 
+                    <a href="mailto:${engineer.email}">${engineer.email}</a>
+                </h3>
+                <h3> Github: 
+                    <a href="https://github.com/${engineer.github}">${engineer.github}</a>
+                </h3>
             </div>`
         })
         .join("")}
@@ -79,7 +85,9 @@ const generateInternCards = teamArray => {
             </h2>
             <div class = "employee-info">
                 <h3>ID: ${intern.employeeID}</h3>
-                <h3>Email: ${intern.email}</h3>
+                <h3>Email: 
+                    <a href="mailto:${intern.email}">${intern.email}</a>
+                </h3>
                 <h3>School: ${intern.school}</h3>
             </div>`
         })
