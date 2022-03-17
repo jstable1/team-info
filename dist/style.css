@@ -11,17 +11,27 @@
     padding: 40px;
 }
 
+.flex-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
 .container {
-    width: 20%;
-    flex-wrap: wrap;
+    width: 25%;
     background-color: #F6F7F9;
 }
 
 .name {
    color: var(--primary);
    background-color: var(--secondary);
+   margin-top: auto;
+   padding: 10px;
 }
 
 .employee-info h3 {
     background-color: var(--primary);
+    width: 90%;
+    padding: 5px;
+    margin: 8px;
 }

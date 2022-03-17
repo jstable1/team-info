@@ -12,9 +12,11 @@ const createHTML = teamArray => {
 </head>
 <body>
 <h2 class = "heading"> My Team </h2>
-${generateManagerCard(teamArray)}
-${generateEngineerCards(teamArray)}
-${generateInternCards(teamArray)}
+    <div class = "flex-row">
+        ${generateManagerCard(teamArray)}
+        ${generateEngineerCards(teamArray)}
+        ${generateInternCards(teamArray)}
+    </div>
 </body>
 </html>
 `
@@ -27,10 +29,10 @@ const generateManagerCard = teamArray => {
         .filter(( employee ) => employee.getRole() === 'manager')
         .map (( manager ) => {
             return `
-            <div class = "name">
+            <h2 class = "name">
                 ${manager.name} <br>
-                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/fluency-systems-filled/48/000000/coffee.png"/> Manager
-            </div>
+                ☕ Manager
+            </h2>
             <div class = "employee-info">
                 <h3> ID: ${manager.employeeID} </h3>
                 <h3> Email: ${manager.email} </h3>
@@ -49,14 +51,14 @@ const generateEngineerCards = teamArray => {
         .filter(( employee ) => employee.getRole() === 'engineer')
         .map (( engineer ) => {
             return `
-            <div class = "name">
+            <h2 class = "name">
                 ${engineer.name} <br>
-                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-glasses-banking-and-finance-kiranshastry-lineal-kiranshastry.png"/> Engineer
-            </div>
+                👓 Engineer
+            </h2>
             <div class = "employee-info">
-                ID: ${engineer.employeeID}
-                Email: ${engineer.email}
-                GitHub: ${engineer.github}
+                <h3> ID: ${engineer.employeeID} </h3>
+                <h3> Email: ${engineer.email} </h3>
+                <h3> GitHub: ${engineer.github} </h3>
             </div>`
         })
         .join("")}
@@ -73,7 +75,7 @@ const generateInternCards = teamArray => {
             return `
             <h2 class = "name">
                 ${intern.name} <br>
-                <link rel="icon" type="image/x-icon" href="https://img.icons8.com/material-sharp/24/000000/student-female.png"/> Intern
+                🧑‍🎓 Intern
             </h2>
             <div class = "employee-info">
                 <h3>ID: ${intern.employeeID}</h3>
