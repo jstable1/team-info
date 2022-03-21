@@ -24,61 +24,61 @@ const createHTML = teamArray => {
 
 const generateManagerCard = teamArray => {
     return `
-    <section class = "manager-card container">
     ${teamArray
         .filter(( employee ) => employee.getRole() === 'manager')
         .map (( manager ) => {
             return `
-            <h2 class = "name">
-                ${manager.name} <br>
-                ☕ Manager
-            </h2>
-            <div class = "employee-info">
-                <h3> ID: ${manager.employeeID} </h3>
-                <h3> Email: 
-                    <a href="mailto:${manager.email}">${manager.email}</a>
-                </h3>
-                <h3> Office Number: ${manager.officeNumber} </h3>
-            </div>`
+            <section class = "manager-card container">
+                <h2 class = "name">
+                    ${manager.name} <br>
+                    ☕ Manager
+                </h2>
+                <div class = "employee-info">
+                    <h3> ID: ${manager.employeeID} </h3>
+                    <h3> Email: 
+                        <a href="mailto:${manager.email}">${manager.email}</a>
+                    </h3>
+                    <h3> Office Number: ${manager.officeNumber} </h3>
+                </div>
+            </section>`
         })
         .join("")}
-    </section>
     `
 }
 
 const generateEngineerCards = teamArray => {
     return `
-    <section class = "engineer-cards container">
     ${teamArray
         .filter(( employee ) => employee.getRole() === 'engineer')
         .map (( engineer ) => {
             return `
-            <h2 class = "name">
-                ${engineer.name} <br>
-                👓 Engineer
-            </h2>
-            <div class = "employee-info">
-                <h3> ID: ${engineer.employeeID} </h3>
-                <h3> Email: 
-                    <a href="mailto:${engineer.email}">${engineer.email}</a>
-                </h3>
-                <h3> Github: 
-                    <a href="https://github.com/${engineer.github}">${engineer.github}</a>
-                </h3>
-            </div>`
+            <section class = "engineer-cards container">
+                <h2 class = "name">
+                    ${engineer.name} <br>
+                    👓 Engineer
+                </h2>
+                <div class = "employee-info">
+                    <h3> ID: ${engineer.employeeID} </h3>
+                    <h3> Email: 
+                        <a href="mailto:${engineer.email}">${engineer.email}</a>
+                    </h3>
+                    <h3> Github: 
+                        <a href="https://github.com/${engineer.github}">${engineer.github}</a>
+                    </h3>
+                </div>
+            </section>`
         })
         .join("")}
-    </section>
     `
 }
 
 const generateInternCards = teamArray => {
     return `
-    <section class = "intern-cards container">
     ${teamArray
         .filter(( employee ) => employee.getRole() === 'intern')
         .map (( intern ) => {
             return `
+            <section class = "intern-cards container">
             <h2 class = "name">
                 ${intern.name} <br>
                 🧑‍🎓 Intern
@@ -89,10 +89,10 @@ const generateInternCards = teamArray => {
                     <a href="mailto:${intern.email}">${intern.email}</a>
                 </h3>
                 <h3>School: ${intern.school}</h3>
-            </div>`
+            </div>
+            </section>`
         })
         .join("")}
-    </section>
     `
 }
 
