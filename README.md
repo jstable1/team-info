@@ -12,7 +12,8 @@ All you need to do to use this application is run npm install from the command l
 ​
 ## Usage 
 ​
-Here's a link to a video on how to use this application: https://drive.google.com/file/d/1jPrKMNe7qRdF2P9WumBG4x7qC-HnmWKa/view.
+Here's a link to a video on how to use this application: 
+https://drive.google.com/file/d/1vW3nlSgh89NaFY67IOIOi-rcfDtH-TSI/view
 
 ## Screenshot
 ​
